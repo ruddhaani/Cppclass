@@ -81,6 +81,15 @@ class Developer : public Employee{
         displayEmployee();
         cout << "Project Name: " << projectName << endl;
     }
+
+    ~Developer(){
+            delete [] name;
+            delete age;
+            delete salary;
+            delete eid;
+            delete [] projectName;
+            cout << "Everything in the dynamic memory is deleted!" << endl;
+        }
 };
 
 int main(){
